@@ -1,0 +1,21 @@
+Connection c = null;
+	    Statement stmt = null;
+	    int count = 0;
+	    try {
+	      Class.forName("org.sqlite.JDBC");
+	      c = DriverManager.getConnection("jdbc:sqlite:C:/Users/Egidijus/Downloads/sqlitestudio-3.1.1/SQLiteStudio/MusuTestineBaze");	      
+	      c.setAutoCommit(false);
+	      
+	      try {
+              Statement st = c.createStatement();
+              BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+              ResultSet res = st.executeQuery("SELECT COUNT(*) FROM KLIENTAI");
+              while (res.next()){
+                  count = res.getInt(1);
+              }
+              System.out.println("Number of row:"+count);
+          }
+          catch (SQLException s){
+              System.out.println("SQL statement is not executed!");
+          }
+	  }

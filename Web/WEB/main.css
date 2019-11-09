@@ -1,0 +1,31 @@
+h1 {
+	color:#24c6cc;
+	font-size:52px;
+	font-family: 'Quicksand', sans-serif;
+}
+.labas {
+	color:rgb(45, 239, 31);
+	font-family: 'Dancing Script', cursive;
+	font-size:22px;
+}
+#sup {
+	color:orange;
+}
+.marginas {
+	margin-left: 100px;
+	margin-right: 100px;
+	background: #42f462;
+	border-bottom: 5px solid blue;
+			}
+.paddingas {
+	padding: 30px; background: yellow;
+	border-right: dotted 40px red;
+	border-left: dashed 10px #d12581;
+	border-top: double 10px blue;
+	border-bottom: solid 30px #f442e2;
+	width: 300px;
+			}
+.paveiksliukas {height: 200px}
+
+.dydis{ height: 200px;
+	float: left; }

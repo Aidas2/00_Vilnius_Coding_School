@@ -1,0 +1,19 @@
+Connection c = null;
+	    Statement stmt = null;
+	    try {
+	      Class.forName("org.sqlite.JDBC");
+	      c = DriverManager.getConnection("jdbc:sqlite:C:/Users/Egidijus/Downloads/sqlitestudio-3.1.1/SQLiteStudio/SuperUltraMega");	      
+	      c.setAutoCommit(false);
+	      System.out.println("Sekmingai prisijungta prie duomenu bazes");
+
+	      stmt = c.createStatement();
+	      String sql = "INSERT INTO UZSAKYMAI VALUES (7, '2012.01.01', 'Nera', 300);";	      
+	      stmt.executeUpdate(sql);
+	      stmt.close();
+	      c.commit();
+	      c.close();
+	    } catch ( Exception e ) {
+	      System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+	      System.exit(0);
+	    }
+	    System.out.println("Irasai sukurti sekmingai!");

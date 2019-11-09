@@ -1,0 +1,9 @@
+INDEX VERSION 1.131+D:\Dropbox\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
+313499201.index
+3647491236.index
+4179370085.index
+273507809.index
+1634998509.index
+2433862868.index
+1404827526.index
+2311133851.index

@@ -1,0 +1,52 @@
+.konteineris {margin-top: 20px;}
+.logotipas {
+	margin-left: 20px;
+	margin-top: 7px;
+}
+.trupinelis {margin-left: 20px; }
+
+.centras {text-align: center;}
+.disklaimeris {font-size:6px;}
+.centras2 {
+	text-align: center;
+	font-family: 'Metamorphous', cursive;
+}
+.centras3{
+	height: 450px;
+	margin-left: 25px;
+}
+
+.foto1 {
+	height: 100%;
+}
+.foto2 {
+	height: 100%;
+}
+.foto3 {
+	height: 100%;
+}
+.foto4 {
+	height: 100%;
+}
+
+.navbaras {
+	background: linear-gradient(to right, green, yellow, teal );
+}
+
+.b {
+	text-align: justify;
+}
+.a {
+	text-align: justify;
+}
+.c {
+	text-align: justify;
+}
+.tekstinis {
+	margin: 10px;
+}
+.netyciukas {
+	text-align: center;
+	font-size: 16px;
+	font-family: 'Courgette', cursive;
+}

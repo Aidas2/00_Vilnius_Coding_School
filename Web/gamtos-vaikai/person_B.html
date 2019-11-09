@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/gabaritai_A.css">
+    <link rel="stylesheet" type="text/css" href="css/tabai_A.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+      <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js"></script>
+    <script type = "text/javascript">
+         google.charts.load('current', {packages: ['corechart']});     
+    </script>
+      	<title>Neisnykusi Lietuva - Medžioklė</title>
+</head>
+
+<body background="pictures/lapuotas-fonas.jpg">
+
+	<nav>
+	    <div class="nav-wrapper green accent-4 navbaras">
+	        <img class="logotipas" src="pictures/logotipas.png" height="50px">
+	        
+	        <ul id="nav-mobile" class="right ">
+	            <li><a href="index.html">Pagrindinis</a></li>
+	            <li><a href="aboutUs_A.html">Rezervatai</a></li>
+	            <li><a class='dropdown-trigger' href='stats.html' data-target='dropdown1'>Statistika<i class="material-icons right">arrow_drop_down</i></a>
+
+	               	<ul id='dropdown1' class='dropdown-content'>
+	                    <li><a href="person_A.html">Bendroji</a></li>
+	                    <li><a href="person_B.html">Medžioklės</a></li>
+	                    <li><a href="person_C.html">Žvejyba</a></li>
+	                </ul>
+
+	            </li>
+	        </ul>
+	    </div>
+	</nav>
+
+	<nav>
+	    <div class="nav-wrapper lime darken-3">
+	        <div class="col s12 trupinelis">
+	            <a href="index.html" class="breadcrumb">Pagrindinis</a>
+	            <a href="stats.html" class="breadcrumb">Statistika</a>
+	            <a href="person_B.html" class="breadcrumb">Medžioklė</a>
+	        </div>
+	    </div>
+	</nav>
+
+    <div class="container">
+	    <div class="row">          
+	        <div class="col s12 amber lighten-1">
+		        <div class="row">
+		           	<h1>Medžioklė Lietuvoje</h1>
+		    <div class="tekstinis">
+		        <img class="gabaritas1 materialboxed" src="pictures/medziokle.jpg" alt="Lietuva"> 
+		            <p class="a"> Medžioklė – tikslingas laukinių žvėrių, paukščių ir kai kurių stambiųjų roplių  sekimas, tykojimas, persekiojimas, šaudymas arba gaudymas. Tai gali būti verslas, pramoga ar apsirūpinimo maistu būdas. Šiais laikais daugiausia medžiojama medžiokliniais šautuvais (su optiniais taikikliais ar be jų), taip pat spąstais, tinklais, kitomis gaudyklėmis, aptvarais. Banginiai ir kai kurie kiti jūrų gyvūnai gali būti medžiojami žeberklais. Labiausiai paplitę medžioklės būdai yra šaudymas (varovams varant su medžiokliniais šunimis ar be jų, tykojant, sėlinant) ir gaudymas (spąstais, tinklais ar pasitelkiant medžioklinius šunis). Senovėje būdavo medžiojama naudojant šaltus ginklus (ietis, akstis, lankus, arbaletus, bolas, bumerangus, svaidykles ir pan.), žeberklus, taip pat naudojant medžioklinius šunis, medžioklinius paukščius (sakalus, vanagus, erelius ir pan.), gepardus ir pan.
+  
+					<p class="a">Skiriama:
+				<ul>
+					<li> - Teisėta medžioklė, kai medžiojama laikantis tam tikrų taisyklių (patvirtintų valstybės ar, senosiose kultūrose, bendruomenės papročių).</li>
+					<li> - Brakonieriavimas, kai medžiojama nesilaikant galiojančių reglamentuojančių aktų – medžiojant draudžiamu metu, neleidžiamas medžioti rūšis, viršijant leistą sumedžioti limitą.</li>
+				</ul>
+					</p>
+					<p class="disklaimeris">Puslapio kūrėjai neatsako už toliau pateiktų duomenų tikslumą</p>
+			</div>
+		        </div>
+	        </div>         
+	    </div>
+
+		<div class="row white">
+			<div class="col s12 m4">
+				<h4>Vidutinis medžioklės plotų vieneto dydis, ha:</h4>
+				<div id="piechart1"></div>
+				<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+					<script type="text/javascript">
+						// Load google charts
+						google.charts.load('current', {'packages':['corechart']});
+						google.charts.setOnLoadCallback(drawChart);
+						// Draw the chart and set the chart values
+						function drawChart() {
+						  var data = google.visualization.arrayToDataTable([
+						  ['Pavadinimas', 'Kiekis'],
+						  ['Kauno', 9111],
+						  ['Alytaus', 8580],
+						  ['Telšių', 9963],
+						  ['Klaipėdos', 8921],
+						  ['Tauragės', 9087]
+							]);
+						  // Optional; add a title and set the width and height of the chart
+						  var options = {'width':300, 'height':200};
+						  // Display the chart inside the <div> element with id="piechart1"
+						  var chart = new google.visualization.PieChart(document.getElementById('piechart1'));
+						  chart.draw(data, options);
+						}
+					</script>
+				</div>
+
+				<div class="col s12 m4">
+					<h4>Vidutinis miškų plotas vienetuose:</h4>
+					<div id="piechart2"></div>
+					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+					<script type="text/javascript">
+						// Load google charts
+						google.charts.load('current', {'packages':['corechart']});
+						google.charts.setOnLoadCallback(drawChart);
+						// Draw the chart and set the chart values
+						function drawChart() {
+						  var data = google.visualization.arrayToDataTable([
+						  ['Pavadinimas', 'Kiekis'],
+						  ['Alytaus', 46],
+						  ['Kauno', 33],
+						  ['Telšių', 32],
+						  ['Klaipėdos', 30],
+						  ['Tauragės', 33]
+							]);
+						  // Optional; add a title and set the width and height of the chart
+						  var options = {'width':300, 'height':200};
+						  // Display the chart inside the <div> element with id="piechart2"
+						  var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+						  chart.draw(data, options);
+						}
+					</script>	
+				</div>
+
+			<div class="col s12 m4">
+					<h4>Populiariausi medžiojami gyvūnai:</h4>
+				<div id="piechart3"></div>
+					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+					<script type="text/javascript">
+						// Load google charts
+						google.charts.load('current', {'packages':['corechart']});
+						google.charts.setOnLoadCallback(drawChart);
+						// Draw the chart and set the chart values
+						function drawChart() {
+						  var data = google.visualization.arrayToDataTable([
+						  ['Pavadinimas', 'Kiekis'],
+						  ['Stirnos', 8],
+						  ['Šernai', 7],
+						  ['Lapės', 10],
+						  ['Kiškiai', 12],
+						  ['Vilkai', 2]
+							]);
+						  // Optional; add a title and set the width and height of the chart
+						  var options = {'width':300, 'height':200};
+						  // Display the chart inside the <div> element with id="piechart3"
+						  var chart = new google.visualization.PieChart(document.getElementById('piechart3'));
+						  chart.draw(data, options);
+						}
+					</script>
+				</div>
+			</div>
+
+			<div class="row white">
+				<div class="col s12 m6">
+					<h4>Teisėta medžioklė ir brakonieriavimas:</h4>
+				    <div id = "container1" style = "width: 400px; height: 400px; margin: 0 auto"></div>
+			      	<script language = "JavaScript">
+			         	function drawChart() {
+				            // Define the chart to be drawn.
+				            var data = google.visualization.arrayToDataTable([
+				               ['Year', 'Teis.', 'Brak.'],
+				               ['2014',  750,      350],
+				               ['2015',  800,      300],
+				               ['2016',  970,      420],
+				               ['2017',  1200,     410],
+				               ['2018',  1378,     300]
+				            ]);
+				            var options = {title: ''};  
+				            // Instantiate and draw the chart.
+				            var chart = new google.visualization.ColumnChart(document.getElementById('container1'));
+				            chart.draw(data, options);
+			         	}
+			         	google.charts.setOnLoadCallback(drawChart);
+			      	</script>
+				</div>
+
+				<div class="col s12 m6">
+					<h4>Afrikinis kiaulių maras skaičiais:</h4>
+				    <div id = "container2" style = "width: 400px; height: 400px; margin: 0 auto"></div>
+				    <script language = "JavaScript">
+				        function drawChart() {
+				            // Define the chart to be drawn.
+				            var data = google.visualization.arrayToDataTable([
+				               ['Metai', 'Židin.', 'Šern.'],
+				               ['2014',   45,     76],
+				               ['2015',  111,    132],
+				               ['2016',  303,    650],
+				               ['2017', 1328,   2456],
+				               ['2018',  179,   2540]
+				            ]);
+				            var options = { isStacked:true};  
+				            // Instantiate and draw the chart.
+				            var chart = new google.visualization.ColumnChart(document.getElementById('container2'));
+				            chart.draw(data, options);
+				        }
+				        google.charts.setOnLoadCallback(drawChart);
+				      </script>
+				</div>
+			</div>
+
+			<div class="row white">
+	        	<div class="col s12 m6 brown lighten-3 gabaritas2">
+		            <h4>Medžioklinis peilis:</h4>
+		            <img class="gabaritas1" src="pictures\peilis.jpg" alt="peilis">
+		            
+		            <p class="b">  Kiekvienam medžiotojui yra būtinas geras peilis - ar pašautam žvėriui pribaigti, ar jau nušautam kailį nudirti, ar apskritai apsiginti nuo puolančio žvėries ar žmogaus.
+		            </p>
+
+		            Gerą peilį galima įsigyti specializuotose parduotuvėse. Pavyzdžiui, čia: 
+					<a target="_blank" href = "https://geripeiliai.lt/3-geri-peiliai"> Geri peilai </a> P.S. Jie turi ir virtuvinių peilių.
+	        	</div>
+
+       			<div class="col s12 m6 deep-orange lighten-4 gabaritas2">
+	       			<h4>Medžioklinis šautuvas:</h4>
+	       			<img class="gabaritas1" src="pictures\sautuvas.jpg" alt="sautuvas">
+	       			
+					<p class="c">
+						O kaip gi be šaunamojo ginklo? Kas gi į medžioklę eina tik su peiliu? Gerai medžioklei būtinas ir geras šautuvas. Jų būna įvairių ir tikrai kiekvienas gali pasirinkti sau tinkantį ir patinkantį šautuvą. 
+						Geriausia ginklus pirkti iš sertifikuotų pardavėjų.  
+					</p>
+					Trokštamą šautuvą galima įsigyti čia:
+					<a target="_blank" href = "https://www.oksalis.lt/kategorijos/ginklai/medziokliniai-ginklai/lygiavamzdziai-sautuvai068"> Šautuvai </a>
+        		</div>
+        	</div>        	
+        </div>
+
+	    <footer class="page-footer lime darken-3">
+	        <div class="container">
+	            © 5839 Gamtos Vaikai
+	        </div>
+	    </footer>
+
+      <!--JavaScript at end of body for optimized loading-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/tabai_A.js"></script>
+    <script type="text/javascript" src="js/karusele_A.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    
+</body>
+</html>

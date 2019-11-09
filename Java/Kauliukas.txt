@@ -1,0 +1,49 @@
+int suma = 100;
+		int statymas;
+		int spejamasSkaicius;
+		boolean on = true;
+		Random rand = new Random();
+		int sugeneruotasSkaicius;
+		System.out.println(
+				"Pasirinkite ka norite daryti? 1 – zaisti, 2 – pasiimti turimus ar likusius pinigus ir baigti zaidima/programa");
+		Scanner s = new Scanner(System.in);
+		int ivestasSkaicius = s.nextInt();
+		// System.out.println(ivestasSkaicius);
+		while (on){
+		switch (ivestasSkaicius) {
+		case 1:
+			System.out.println(ivestasSkaicius);
+			System.out.println("Iveskite statoma suma, min – 5, max – 20 pinigu");
+			statymas = s.nextInt();
+			System.out.println(statymas);
+			if (statymas < suma && statymas >= 5 && statymas <= 20){
+				System.out.println("Iveskite spejama skaiciu nuo 1 iki 6");
+				spejamasSkaicius = s.nextInt();
+				System.out.println("Spejamas skaicius yra " + spejamasSkaicius);
+				sugeneruotasSkaicius = rand.nextInt(6) + 1;
+				System.out.println("Sugeneruotas skaicius " + sugeneruotasSkaicius);
+				if (spejamasSkaicius == sugeneruotasSkaicius){
+					// statymas = statymas * 6;
+					suma = suma + (statymas * 6);
+				} else {
+					System.out.println("Bandykite dar karta");
+					suma = suma - statymas;
+				}
+				System.out.println("Turima pinigu suma yra " + suma);
+			} else {
+				System.out.println("Statymas netinkamas, pasirinkote neteisinga suma arba nepakanka pinigu");
+			}
+			System.out.println("Pasirinkite ka norite daryti? 1 – zaisti, 2 – pasiimti turimus ar likusius pinigus ir baigti zaidima/programa");
+			ivestasSkaicius = s.nextInt();
+			break;
+		case 2:
+			System.out.println(ivestasSkaicius + " zaidimas baigtas");
+			on = false;
+			break;
+		default:
+			System.out.println("Blogai ivestas skaicius, skaicius turi buti nuo 1 iki 2");
+			ivestasSkaicius = s.nextInt();
+			System.out.println(ivestasSkaicius);
+			break;
+		}
+		}
